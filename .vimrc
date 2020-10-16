@@ -3,6 +3,9 @@
 "*****************************************************************************
 "" Vim-Plug core
 "*****************************************************************************
+
+
+
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 if has('win32')&&!has('win64')
   let curl_exists=expand('C:\Windows\Sysnative\curl.exe')
@@ -13,8 +16,7 @@ endif
 let g:vim_bootstrap_langs = "c,elixir,elm,erlang,go,haskell,html,javascript,lisp,lua,ocaml,perl,php,python,ruby,rust,scala,typescript"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 let g:vim_bootstrap_theme = "codedark"
-let g:vim_bootstrap_frams = "vuejs"
-
+let g:vim_bootstrap_frams = "vuejs" 
 if !filereadable(vimplug_exists)
   if !executable(curl_exists)
     echoerr "You have to install curl or first install vim-plug yourself!"
@@ -51,7 +53,20 @@ Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tomasiser/vim-code-dark'
-
+Plug 'townk/vim-autoclose'
+Plug 'othree/html5.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'stanangeloff/php.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'jvanja/vim-bootstrap4-snippets'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'valloric/youcompleteme'
+Plug 'tellijo/vim-react-native-snippets'
+Plug 'burnettk/vim-angular'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -366,7 +381,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 50
+let g:NERDTreeWinSize = 30
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
